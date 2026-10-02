@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookora - معرض الكتب</title>
+  <!-- MDBootstrap & Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    <style>
+  body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* 1. كود هيدر الخلفية */
+  .hero-section {
+    /* المسار الصحيح للصور التي تحتوي على مسافات مع طبقة تظليل */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                      url('./Camera%20Roll/WhatsApp%20Image%202026-09-21%20at%205.21.13%20PM.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    color: #ffffff;
+    
+    /* للتحكم في طول الخلفية (تقديري تخليه 500px أو 600px زي ما تحبي) */
+    min-height: 500px;
+    width: 100%;
+    
+    /* لتوسيط النصوص داخل الخلفية */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    border-radius: 0;
+    text-align: center;
+    
+  }
+
+  /* 2. تصميم كروت الكتب */
+  .card-book {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+  }
+
+  .card-book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+
+  /* 3. تصميم صور غلاف الكتب */
+  .book-img {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  /* 4. زرار الشراء بلون البراند */
+  .btn-buy {
+    background-color: #C13B00;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+
+  .btn-buy:hover {
+    background-color: #a03000;
+    color: #fff;
+  }
+  /* تنسيقات أيقونات السوشيال ميديا في الفوتر */
+.social-icon {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #C13B00;
+  color: #ffffff;
+}
+
+/* تنسيقات الروابط في الفوتر */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #C13B00;
+}
+</style>
+    
+  </style>
+</head>
+<body>
+<!-- Start your project here-->
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 130px;">
+  <!-- Container wrapper -->
+  <div class="container">
+    <!-- Toggle button -->
+    <button
+      data-mdb-collapse-init
+      class="navbar-toggler"
+      type="button"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse flex-column align-items-stretch" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+       <div class="d-flex align-items-center justify-content-between">
+      <a class="navbar-brand mt-2 mt-lg-0" href="#" >
+        <img
+          src="C:\Users\EL GENDY\Desktop\bookora\WhatsApp Image 2026-09-30 at 9.14.04 PM.jpeg"
+          height="60"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+        <span class="fs-4 text-dark  " style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;">Bookora</span>
+      </a>
+        <div class="d-flex align-items-center  rounded-pill bg-light p-1  border"style="width: 450px;">
+     <i class="fa-brands fa-sistrix"></i>
+        <input type="search" class="form-control border-0 bg-transparent shadow-none"  placeholder="Search by title or author ": >
+        <button class="btn rounded-pill text-white fw-bold px-4 py-2 hvr-bounce-in btn-custom" style="background-color: #a83403;">
+             SEARCH
+
+        </button>
+        </div>
+
+    
+      
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center gap-3 ">
+      <!-- Icon -->
+    <a href="#" class="text-dark   text-decoration-none  hvr-pop">
+  <i class="far fa-heart fs-8"></i>
+</a>
+
+      <!-- Notifications -->
+      <div class="dropdown ">
+        <a
+          data-mdb-dropdown-init
+          class="text-reset me-3 dropdown-toggle hidden-arrow  "
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          aria-expanded="false"
+        >
+        <a href="#" class="text-dark text-decoration-none hvr-pop ">
+  <i class="fas fa-shopping-bag fs-8"></i>
+
+          <span class="badge rounded-circle badge-notification  " style="background-color: #ac3401; "> 2 </span>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Some news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another news</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a class="text-dark text-decoration-none hvr-pop m-4 " href="#">
+          <i class="far fa-user fs-8"></i>
+        </a>
+      </div>
+    </div>
+       </div>
+        <div class="d-flex justify-content-center gap-4 py-2  btn-world">
+      
+          
+            <a class="text-dark text-decoration-none fw-semibold hvr-underline-from-center "  href="#home"> Home</a>
+          
+          
+            <a class="text-dark text-decoration-none fw-semibold hvr-underline-from-center" href="#book">Book</a>
+          
+          
+            <a class="text-dark text-decoration-none fw-bold hvr-underline-from-center" href="#categories">Categories</a>
+          
+            <a class="text-dark text-decoration-none fw-semibold hvr-underline-from-center" href="#new releases">New Releases</a>
+          
+            <a class="text-dark text-decoration-none fw-semibold hvr-underline-from-center" href="#best sellers">Best Sellers</a>
+        
+          
+            <a class="text-dark text-decoration-none fw-semibold hvr-underline-from-center" href="#abouts us"> Abouts Us</a>
+          
+      
+        </div>
+      
+        
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right elements -->
+       
+  </div>
+  <!-- Container wrapper -->
+</nav>
+  
+
+  <!-- Header Banner -->
+  
+    <div class="hero-section mb-5">
+    
+    
+    
+       
+    </div>
+
+    <!-- Books Grid -->
+    <div class="row g-4">
+
+      <!-- الكتاب الأول -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card card-book h-100 shadow-sm">
+          <img src="Saved Pictures/WhatsApp Image 2026-09-21 at 4.56.04 PM (1).jpeg" class="card-img-top book-img" alt="أرض زيكولا">
+          <div class="card-body d-flex flex-column justify-content-between text-center">
+            <div>
+              <span class="text-uppercase text-muted small">فانتزيا / روايات</span>
+              <h5 class="card-title fw-bold mt-1">قضيه مخالب القط</h5>
+              <p class="text-muted small">ميرنا المهدي</p>
+            </div>
+            <div class="mt-3">
+              <div class="fw-bold fs-5 mb-2 text-dark">$18.50</div>
+              <a href="checkout.html" class="btn btn-buy w-100 py-2">اشتري الكتاب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الكتاب الثاني -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card card-book h-100 shadow-sm">
+          <img src="Saved Pictures/WhatsApp Image 2026-09-21 at 4.56.04 PM (2).jpeg" class="card-img-top book-img" alt="إيكادولي">
+          <div class="card-body d-flex flex-column justify-content-between text-center">
+            <div>
+              <span class="text-uppercase text-muted small">فانتزيا / رومانسية</span>
+              <h5 class="card-title fw-bold mt-1">قضيه ست الحسن</h5>
+              <p class="text-muted small">ميرنا المهدي</p>
+            </div>
+            <div class="mt-3">
+              <div class="fw-bold fs-5 mb-2 text-dark">$17.90</div>
+              <a href="checkout.html" class="btn btn-buy w-100 py-2">اشتري الكتاب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الكتاب الثالث -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card card-book h-100 shadow-sm">
+          <img src="Saved Pictures/WhatsApp Image 2026-09-21 at 4.56.04 PM (3).jpeg" class="card-img-top book-img" alt="غلاف كتاب">
+          <div class="card-body d-flex flex-column justify-content-between text-center">
+            <div>
+              <span class="text-uppercase text-muted small">فانتازيا</span>
+              <h5 class="card-title fw-bold mt-1">قضيه لوز مر</h5>
+              <p class="text-muted small">ميرنا المهدي</p>
+            </div>
+            <div class="mt-3">
+              <div class="fw-bold fs-5 mb-2 text-dark">$15.00</div>
+              <a href="checkout.html" class="btn btn-buy w-100 py-2">اشتري الكتاب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الكتاب الرابع -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card card-book h-100 shadow-sm">
+          <img src="Saved Pictures/WhatsApp Image 2026-09-21 at 4.56.04 PM (4).jpeg" class="card-img-top book-img" alt="غلاف كتاب">
+          <div class="card-body d-flex flex-column justify-content-between text-center">
+            <div>
+              <span class="text-uppercase text-muted small"> غموض</span>
+              <h5 class="card-title fw-bold mt-1">قضيه عنب الثعلب</h5>
+              <p class="text-muted small">ميرنا المهدي</p>
+            </div>
+            <div class="mt-3">
+              <div class="fw-bold fs-5 mb-2 text-dark">$20.00</div>
+              <a href="checkout.html" class="btn btn-buy w-100 py-2">اشتري الكتاب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- قسم الاشتراك في النشرة البريدية (Newsletter) -->
+<section class="newsletter-section py-5 text-white" style="background-color: #C13B00;">
+  <div class="container py-3">
+    <div class="row align-items-center">
+      <!-- الجزء الأيسر: النصوص -->
+      <div class="col-lg-6 mb-4 mb-lg-0 text-start">
+        <span class="text-uppercase fw-semibold small tracking-wide opacity-75">A NOTE FROM BOOKORA</span>
+        <h2 class="display-5 fw-bold my-2" style="font-family: Georgia, serif;">Stay Updated</h2>
+        <p class="mb-0 opacity-90">
+          Subscribe to our newsletter and discover new books, special offers, and exciting releases.
+        </p>
+      </div>
+      <!-- الجزء الأيمن: إدخال البريد الإلكتروني والزرار -->
+      <div class="col-lg-6">
+        <form class="d-flex bg-white rounded-pill p-1 shadow-sm align-items-center ms-auto" style="max-width: 500px;">
+          <input type="email" class="form-control border-0 bg-transparent px-4 text-dark" placeholder="Enter your email address" style="box-shadow: none;" required>
+          <button class="btn text-white rounded-pill px-4 py-2 text-uppercase fw-bold" type="submit" style="background-color: #C13B00; letter-spacing: 1px;">
+            SUBSCRIBE &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الفوتر الرئيسي (Footer) -->
+<footer class="footer-section bg-dark text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4 text-start">
+      
+      <!-- العمود الأول: اللوجو والوصف وأيقونات التواصل -->
+      <div class="col-lg-4 col-md-6">
+        <a class="navbar-brand fw-bold fs-3 text-white d-flex align-items-center mb-3" href="index.html">
+          <i class="fa-solid fa-book-open me-2" style="color: #C13B00;"></i> Bookora
+        </a>
+        <p class="text-white-50 small mb-4" style="max-width: 300px;">
+          Your destination for books, knowledge, and imagination.
+        </p>
+
+        <!-- أيقونات وسائل التواصل -->
+        <div class="d-flex gap-2">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- العمود الثاني: Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="#">New Releases</a></li>
+          <li><a href="#">Best Sellers</a></li>
+        </ul>
+      </div>
+
+      <!-- العمود الثالث: Categories -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Categories</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Fantasy</a></li>
+          <li><a href="#">Religious</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Literary</a></li>
+        </ul>
+      </div>
+
+      <!-- العمود الرابع: Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Contact</h6>
+        <ul class="list-unstyled text-white-50 small d-flex flex-column gap-3">
+          <li class="d-flex align-items-center gap-2">
+            <i class="fas fa-envelope p-2 rounded-circle" style="background-color: #C13B00; color: #fff;"></i>
+            <span>hello@bookora.com</span>
+          </li>
+          <li class="d-flex align-items-center gap-2">
+            <i class="fas fa-phone p-2 rounded-circle" style="background-color: #C13B00; color: #fff;"></i>
+            <span>+1 (800) 555-0142</span>
+          </li>
+          <li class="d-flex align-items-center gap-2">
+            <i class="fas fa-map-marker-alt p-2 rounded-circle" style="background-color: #C13B00; color: #fff;"></i>
+            <span>28 Library Lane, New York, NY</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  <!-- MDBootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.btn-coustom{
+    background-color:#94340b ;
+    color: white;
+    transition: all 0.3s ease;
+}
+.btn-coustom:hover,
+.btn-coustom:active,
+.btn-coustom:focus{
+    background-color: #94340b;
+    color: white;
+}
+.hvr-underline-from-center:before {
+  background: #C13B00 !important;
+  height: 3px; /* سمك الخط */
+}
+/* خلفية دائرة برتقالية خفيفة جداً عند الوقوف على الأيقونة */
+.icon-circle-hover {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.icon-circle-hover:hover {
+  background-color: rgba(193, 59, 0, 0.12); /* لون برتقالي خفيف ناعم */
+  color: #C13B00 !important; /* درجة لون الأيقونة تتغير للبرتقالي المحروق */
+}
+.btn-world:active,
+.btn-world:focus{
+  color: #C13B00;
+}
